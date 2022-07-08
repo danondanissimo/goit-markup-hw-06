@@ -67,9 +67,59 @@
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button class="close-button" data-modal-close>
-              <img src="./images/vector.png" alt="Закрыть" />
-            </button>
+            <form class="form">
+              <p class="form-exhortation">Оставьте свои данные, мы вам перезвоним</p>
+
+              <div class="form-field">
+                <label class="form-label" for="name">Имя</label>
+                <input class="form-input" name="name" type="text" id="name" />
+                <svg class="form-icon" height="12px" width="12px">
+                  <use href="./images/backdrop-icons.svg#icon-contact"></use>
+                </svg>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="tel">Телефон</label>
+                <input class="form-input" name="tel" type="tel" id="tel" />
+                <svg class="form-icon" height="13px" width="13px">
+                  <use href="./images/backdrop-icons.svg#icon-handset"></use>
+                </svg>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="mail">Почта</label>
+                <input class="form-input" name="mail" type="mail" id="mail" />
+                <svg class="form-icon" height="12px" width="15px">
+                  <use href="./images/backdrop-icons.svg#icon-mail"></use>
+                </svg>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="comment">Комментарий</label>
+
+                <textarea
+                  class="form-input"
+                  name="comment"
+                  id="comment"
+                  rows="8"
+                  placeholder="Введите текст"
+                ></textarea>
+              </div>
+
+              <div class="agreement">
+                <input class="agreement-checkbox" type="checkbox" id="checkbox" />
+                <label class="agreement-label" for="checkbox"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <span><a href="" class="agreement-link">Условия договора</a></span></label
+                >
+              </div>
+
+              <button class="form-button" type="submit">Отправить</button>
+
+              <button class="close-button" data-modal-close>
+                <svg><use href="./images/backdrop-icons.svg#icon-cross"></use></svg>
+              </button>
+            </form>
           </div>
         </div>
       </section>
