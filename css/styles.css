@@ -345,6 +345,7 @@ section {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
+  cursor: pointer;
 }
 
 .close-button:hover {
@@ -412,6 +413,7 @@ section {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
+  cursor: pointer;
 }
 
 .form-input:not(:last-child) {
@@ -428,11 +430,13 @@ section {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form .form-input:focus-visible + .form-icon {
+.form .form-input:focus-visible + .form-icon,
+.form .form-input:hover + .form-icon {
   fill: var(--accent);
 }
 
-.form-input:focus {
+.form-input:focus,
+.form-input:hover {
   outline: transparent;
   border-color: var(--accent);
 }
@@ -888,6 +892,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-left: 93px;
 }
 
 .subscribe-form {
@@ -895,17 +900,72 @@ section {
   flex-direction: column;
 }
 
+.subscribe-form > label {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.subscribe-form > input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background-color: var(--additional-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form > input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .subscribe-button {
   position: absolute;
-  right: -50%;
+  display: flex;
+  right: -212px;
   bottom: 0%;
   width: 200px;
   height: 50px;
+  margin-left: 12px;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  color: var(--accent-secondary);
 
   background: var(--accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
+}
+
+.subscribe-button-icon {
+  /* position: absolute; */
+  margin-left: 10px;
 }
 
 /* Портфолио */
