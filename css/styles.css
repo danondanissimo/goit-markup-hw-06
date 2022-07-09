@@ -342,11 +342,13 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
-.close-icon {
-  width: 18px;
-  height: 18px;
+.close-button:hover {
+  fill: var(--accent);
 }
 
 .form {
@@ -356,7 +358,7 @@ section {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -364,10 +366,9 @@ section {
 
 .form-field {
   position: relative;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .form-exhortation {
@@ -396,6 +397,10 @@ section {
 
 .form-icon {
   position: absolute;
+  transform: translate(15px, 32px);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .form-input {
@@ -404,10 +409,14 @@ section {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .form-input:not(:last-child) {
   margin-bottom: 10px;
+  padding: 12px 42px;
 }
 
 .form-input::placeholder {
@@ -417,6 +426,15 @@ section {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form .form-input:focus-visible + .form-icon {
+  fill: var(--accent);
+}
+
+.form-input:focus {
+  outline: transparent;
+  border-color: var(--accent);
 }
 
 .form-field textarea {
@@ -429,13 +447,56 @@ section {
   border-radius: 4px;
 
   margin-bottom: 20px;
+  padding: 12px 16px;
 }
 
 .agreement {
+  position: relative;
+  display: block;
   margin-bottom: 30px;
 }
 
 .agreement-checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.agreement-checkbox:checked + .agreement-icon {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: var(--accent);
+  background-image: url('/images/test-icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.agreement-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition-property: border, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .agreement-label {
@@ -444,7 +505,7 @@ section {
 }
 
 .agreement-link {
-  color: var();
+  color: var(--accent);
 }
 
 .form-button {
@@ -468,6 +529,10 @@ section {
   border-radius: 4px;
 
   border-color: transparent;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .form-button:hover,
@@ -817,6 +882,30 @@ section {
 .join .social-network-link:hover,
 .join .social-network-link:focus {
   background-color: var(--accent);
+}
+
+.subscribe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-button {
+  position: absolute;
+  right: -50%;
+  bottom: 0%;
+  width: 200px;
+  height: 50px;
+
+  background: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
 }
 
 /* Портфолио */

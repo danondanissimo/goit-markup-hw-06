@@ -70,54 +70,55 @@
             <form class="form">
               <p class="form-exhortation">Оставьте свои данные, мы вам перезвоним</p>
 
-              <div class="form-field">
-                <label class="form-label" for="name">Имя</label>
-                <input class="form-input" name="name" type="text" id="name" />
+              <label class="form-field"
+                ><span class="form-label">Имя</span>
+                <input class="form-input" name="name" type="text" />
                 <svg class="form-icon" height="12px" width="12px">
                   <use href="./images/backdrop-icons.svg#icon-contact"></use>
                 </svg>
-              </div>
+              </label>
 
-              <div class="form-field">
-                <label class="form-label" for="tel">Телефон</label>
-                <input class="form-input" name="tel" type="tel" id="tel" />
+              <label class="form-field"
+                ><span class="form-label">Телефон</span>
+                <input class="form-input" name="tel" type="tel" />
                 <svg class="form-icon" height="13px" width="13px">
                   <use href="./images/backdrop-icons.svg#icon-handset"></use>
                 </svg>
-              </div>
+              </label>
 
-              <div class="form-field">
-                <label class="form-label" for="mail">Почта</label>
-                <input class="form-input" name="mail" type="mail" id="mail" />
+              <label class="form-field"
+                ><span class="form-label">Почта</span>
+                <input class="form-input" name="mail" type="mail" />
                 <svg class="form-icon" height="12px" width="15px">
                   <use href="./images/backdrop-icons.svg#icon-mail"></use>
                 </svg>
-              </div>
+              </label>
 
-              <div class="form-field">
-                <label class="form-label" for="comment">Комментарий</label>
-
+              <label class="form-field"
+                ><span class="form-label">Комментарий</span>
                 <textarea
                   class="form-input"
                   name="comment"
-                  id="comment"
                   rows="8"
                   placeholder="Введите текст"
                 ></textarea>
-              </div>
+              </label>
 
-              <div class="agreement">
-                <input class="agreement-checkbox" type="checkbox" id="checkbox" />
-                <label class="agreement-label" for="checkbox"
+              <label class="agreement">
+                <input class="agreement-checkbox" type="checkbox" />
+                <span class="agreement-icon"> </span>
+                <span class="agreement-label"
                   >Соглашаюсь с рассылкой и принимаю
-                  <span><a href="" class="agreement-link">Условия договора</a></span></label
+                  <a href="" class="agreement-link">Условия договора</a></span
                 >
-              </div>
+              </label>
 
               <button class="form-button" type="submit">Отправить</button>
 
               <button class="close-button" data-modal-close>
-                <svg><use href="./images/backdrop-icons.svg#icon-cross"></use></svg>
+                <svg height="11px" width="11px">
+                  <use href="./images/backdrop-icons.svg#icon-cross"></use>
+                </svg>
               </button>
             </form>
           </div>
@@ -490,6 +491,17 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscribe">
+          <form class="subscribe-form">
+            <label for="sub">Подпишитесь на рассылку </label>
+            <input type="email" id="sub" />
+          </form>
+          <button class="subscribe-button" type="submit">
+            Подписаться<svg height="24px" width="24px">
+              <use href="./images/backdrop-icons.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
