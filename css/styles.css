@@ -963,6 +963,11 @@ section {
   border-color: transparent;
 }
 
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--additional-accent);
+}
+
 .subscribe-button-icon {
   /* position: absolute; */
   margin-left: 10px;
