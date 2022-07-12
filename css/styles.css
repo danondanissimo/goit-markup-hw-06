@@ -402,6 +402,9 @@ section {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
+
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .form-input {
@@ -436,9 +439,11 @@ section {
 }
 
 .form-input:focus,
-.form-input:hover {
+.form-input:hover,
+.form-icon:hover {
   outline: transparent;
   border-color: var(--accent);
+  fill: var(--accent);
 }
 
 .form-field textarea {
@@ -516,11 +521,7 @@ section {
   color: var(--accent-secondary);
   background: var(--accent);
 
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  top: 712px;
-
+  padding: 10px 55px 10px 56px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -532,7 +533,7 @@ section {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
-  border-color: transparent;
+  border: none;
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -892,15 +893,14 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subscribe-form {
   display: flex;
-  flex-direction: column;
 }
 
-.subscribe-form > label {
+.subscribe > p {
   margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--accent-secondary);
@@ -910,7 +910,6 @@ section {
 
 .subscribe-form > input {
   width: 358px;
-  height: 50px;
   padding: 15px 16px;
   background-color: var(--additional-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -934,20 +933,12 @@ section {
 }
 
 .subscribe-button {
-  position: absolute;
-  display: flex;
-  right: -212px;
-  bottom: 0%;
-  width: 200px;
-  height: 50px;
+  position: relative;
   margin-left: 12px;
   padding-top: 10px;
-  padding-right: 28px;
+  padding-right: 62px;
   padding-bottom: 10px;
   padding-left: 29px;
-
-  justify-content: center;
-  align-items: center;
 
   font-weight: 700;
   font-size: 16px;
@@ -973,7 +964,7 @@ section {
 }
 
 .subscribe-button-icon {
-  /* position: absolute; */
+  position: absolute;
   margin-left: 10px;
 }
 

@@ -72,7 +72,7 @@
 
               <label class="form-field"
                 ><span class="form-label">Имя</span>
-                <input class="form-input" name="name" type="text" />
+                <input class="form-input" name="name" type="text" required />
                 <svg class="form-icon" height="12px" width="12px">
                   <use href="./images/backdrop-icons.svg#icon-contact"></use>
                 </svg>
@@ -80,7 +80,7 @@
 
               <label class="form-field"
                 ><span class="form-label">Телефон</span>
-                <input class="form-input" name="tel" type="tel" />
+                <input class="form-input" name="tel" type="tel" required />
                 <svg class="form-icon" height="13px" width="13px">
                   <use href="./images/backdrop-icons.svg#icon-handset"></use>
                 </svg>
@@ -88,7 +88,7 @@
 
               <label class="form-field"
                 ><span class="form-label">Почта</span>
-                <input class="form-input" name="mail" type="mail" />
+                <input class="form-input" name="mail" type="mail" required />
                 <svg class="form-icon" height="12px" width="15px">
                   <use href="./images/backdrop-icons.svg#icon-mail"></use>
                 </svg>
@@ -105,7 +105,7 @@
               </label>
 
               <label class="agreement">
-                <input class="agreement-checkbox" type="checkbox" />
+                <input class="agreement-checkbox" type="checkbox" required />
                 <span class="agreement-icon"> </span>
                 <span class="agreement-label"
                   >Соглашаюсь с рассылкой и принимаю
@@ -493,15 +493,15 @@
           </ul>
         </div>
         <div class="subscribe">
+          <p>Подпишитесь на рассылку</p>
           <form class="subscribe-form">
-            <label for="sub">Подпишитесь на рассылку </label>
-            <input placeholder="E-mail" type="email" id="sub" />
+            <input placeholder="E-mail" type="email" id="sub" required />
+            <button class="subscribe-button" type="submit">
+              Подписаться<svg class="subscribe-button-icon" height="24px" width="24px">
+                <use href="./images/backdrop-icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
-          <button class="subscribe-button" type="submit">
-            Подписаться<svg class="subscribe-button-icon" height="24px" width="24px">
-              <use href="./images/backdrop-icons.svg#icon-send"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </footer>
